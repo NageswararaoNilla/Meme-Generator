@@ -45,18 +45,17 @@ const fontSizesOptionsList = [
     displayText: '32',
   },
 ]
-// Write your code here
 
 class MemeGenerator extends Component {
   state = {
-    activeFontSizeOptionId: fontSizesOptionsList[0].optionId,
-    activeFontSizeId: '',
     backgroundImageUrlInput: '',
     topTextInput: '',
     bottomTextInput: '',
+    activeFontSizeOptionId: fontSizesOptionsList[0].optionId,
     backgroundImageUrl: '',
     topText: '',
     bottomText: '',
+    activeFontSizeId: '',
   }
 
   onChangeBackgroundImage = event => {
@@ -118,7 +117,7 @@ class MemeGenerator extends Component {
           onChange={this.onChangeTopTextInput}
           placeholder="Enter the Top Text"
         />
-        <CustomLabel htmlFor="bottomText">Bottom Text</CustomLabel>
+        <CustomLabel htmlFor="topText">Bottom Text</CustomLabel>
         <CustomInput
           type="text"
           id="bottomText"
